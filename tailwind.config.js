@@ -7,9 +7,21 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      keyframes: {
+        zoomOutBackground: {
+          'to': { transform: 'scale(1)' },
+        },
+        fadeIn: {
+          'to': { opacity: '1' },
+        },
+        smokeEffect: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+      },
+      animation: {
+        zoomOutBackground: 'zoomOutBackground 3s ease-in-out forwards',
+        fadeIn: 'fadeIn 5s ease-in-out forwards',
       },
     },
   },
